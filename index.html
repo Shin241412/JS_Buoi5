@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>JS-Buổi 5</title>
+    </head>
+    <body>
+        <div class="container">
+            <form id="form">
+                <div class="">
+                    <span>Tên</span>
+                    <input type="text" placeholder="Name" id="username">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error/Success</small>
+                </div>
+                <div class="">
+                    <span>Giới tính</span>
+                    <input type="radio" name="gender"><span>Nam</span>
+                    <input type="radio" name="gender"><span>Nữ</span>
+                    <small id="genderError">Error/Success</small>
+                </div>
+                <div class="">
+                    <span>Địa chỉ</span>
+                    <input type="text" placeholder="Address" id="address">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error/Success</small>
+                </div>
+                <div class="">
+                    <span>Email</span>
+                    <input type="email" placeholder="Email" id="email">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error/Success</small>
+                </div>
+                <div class="">
+                    <span>Mật khẩu</span>
+                    <input type="password" placeholder="Password" id="password">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error/Success</small>
+                </div>
+                <div class="">
+                    <span>Sở thích</span>
+                    <input type="checkbox" name="fav"><span>Nghe nhạc</span>
+                    <input type="checkbox" name="fav"><span>Chơi game</span>
+                    <input type="checkbox" name="fav"><span>Xem phim</span>
+                    <small id="favError">Error/Success</small>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

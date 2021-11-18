@@ -1,0 +1,204 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), 
+                radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+    font-family: "Noto Sans Mono";
+    font-size: 17px;
+}
+/* Container */
+.container
+{
+    position: relative;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* Form */
+form
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+form div
+{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+form div span
+{
+    color: #ffffff;
+}
+/* Input */
+input
+{
+    position: relative;
+    width: 80%;
+    padding: 7px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+input[type=radio], input[type=checkbox]
+{
+    width: auto;
+    margin: 5px;
+}
+input:focus
+{
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+}
+input::placeholder
+{
+    color: #ffffff;
+}
+/* Button */
+form div:last-child
+{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button
+{
+    position: relative;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #666666;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+}
+button::before
+{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #1efc82;
+    z-index: -1;
+    transition: 0s;
+    opacity: 0.5;
+}
+button:hover::before
+{
+    transition: 1s;
+    width: 100%;
+    opacity: 1;
+}
+/* Success/Error Icon */
+form div i
+{
+    position: absolute;
+    top: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+form div small
+{
+    display: none;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+/* Success */
+form div.success i.fa-check-circle
+{
+    color: #2af598;
+    visibility: visible;
+}
+form div.success:nth-of-type(1) i.fa-check-circle
+{
+    right: 70px;
+}
+form div.success:nth-of-type(3) i.fa-check-circle
+{
+    right: 30px;
+}
+form div.success:nth-of-type(4) i.fa-check-circle
+{
+    right: 50px;
+}
+form div.success:nth-of-type(5) i.fa-check-circle
+{
+    right: 20px;
+}
+form div.success input
+{
+    border: 2px solid #2af598
+}
+form div.success small
+{
+    color: #2af598;
+    display: block;
+}
+/* Error */
+form div.error i.fa-exclamation-circle
+{
+    color: #fc3567;
+    visibility: visible;
+}
+form div.error:nth-of-type(1) i.fa-exclamation-circle
+{
+    right: 70px;
+
+}
+form div.error:nth-of-type(3) i.fa-exclamation-circle
+{
+    right: 30px;
+}
+form div.error:nth-of-type(4) i.fa-exclamation-circle
+{
+    right: 50px;
+}
+form div.error:nth-of-type(5) i.fa-exclamation-circle
+{
+    right: 20px;
+}
+form div.error input
+{
+    border: 2px solid #fc3567;
+}
+form div.error small
+{
+    color: #fc3567;
+    display: block;
+}
