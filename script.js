@@ -177,6 +177,38 @@ function isSuccess()
 {
     
     let div_succes = document.getElementsByClassName('success');
+
+    // Progress
+    if(div_succes.length == 0)
+    {
+        progress(0);
+    }
+    if(div_succes.length == 1)
+    {
+        progress(17);
+    }
+    if(div_succes.length == 2)
+    {
+        progress(34);
+    }
+    if(div_succes.length == 3)
+    {
+        progress(51);
+    }
+    if(div_succes.length == 4)
+    {
+        progress(68);
+    }
+    if(div_succes.length == 5)
+    {
+        progress(85);
+    }
+    if(div_succes.length == 6)
+    {
+        progress(100);
+    }
+
+    // Submit
     for(let i = 0; i < div_succes.length; i++)
     {
         if
@@ -189,11 +221,20 @@ function isSuccess()
             && div_succes[5].classList.contains('success')
         )
         {
-            form.submit();
+            setTimeout(e => {form.submit();}, 1500);
         }
     }
-
 }
+
+// Progress
+function progress(value)
+{
+    let progress = document.getElementById('progress');
+    let style = getComputedStyle(progress);
+    let width = parseFloat(value);
+    progress.style.setProperty('--width', width);
+}
+
 
 // Regex Name
 function validName(username)
